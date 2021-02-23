@@ -1,7 +1,12 @@
+html {
+  background-color: #818181;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #818181;
 }
 
 textarea{
@@ -11,6 +16,7 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  outline: blue dashed 2px;
 }
 
 .jumbotron {
@@ -19,6 +25,7 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  /* outline: red solid 2px */
 }
 
 .description{
@@ -28,10 +35,12 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
+  
 }
 
 .row {
-  white-space: pre-wrap;
+  /* was pushing down form-control class */
+  /* white-space: pre-wrap; */
   height: 80px;
   border-top: 1px solid white;
   outline: red solid 2px;
@@ -41,7 +50,7 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-  outline: blue dashed 2px;
+  /* outline: blue dashed 2px; */
 }
 
 .past {
@@ -65,10 +74,15 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  outline: blue dashed 2px;
+  /* outline: blue dashed 2px; */
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
+  color: black
+}
+
+.saveBtn  {
+  /* when properties of this change, transition like this */
+  transition: all 0.3s ease-in-out;
 }
