@@ -17,15 +17,31 @@
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
-    <!-- TODO: this - moment  -->
+    <!-- TODO: this - moment  ---- DONE! -->
     <p id="currentDay" class="lead"></p>
   </header>
   <div class="container">
     <!-- Timeblocks go here -->
     <!-- start - 9am -->
-    <section class="row">
+    <section class="row time-block">
+      <div class="hour col-2">
+        <!-- build moment object out of 9am! -->
+        <!-- append this with JS NOT HTML -->
+        9AM
+      </div>
+      <div class=" col-8">
+        <!-- do i need to use it time-block class in text area row?? -->
+        <div class="row">
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+      <button class="saveBtn saveBtn-hover col-2">
+        SAVE
+      </button> 
+    </section>
+    <section class="row time-block">
       <div class="hour col-2 ">
-        time
+        10AM
       </div>
       <div class=" col-8">
         <div class="row">
@@ -36,22 +52,88 @@
         SAVE
       </button> 
     </section>
-    <section class="row">
+    <section class="row time-block">
       <div class="hour col-2 ">
-        time
+        11AM
+      </div>
+      <div class=" col-8">
+        <div class="row time-block">
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+      <button class="saveBtn  col-2">
+        SAVE
+      </button> 
+    </section>
+    <!-- is reading the whole section :( instead use ID="time-block" to select specific ) -->
+    <section class="row time-block">
+      <div class="hour col-2">
+        12AM
       </div>
       <div class=" col-8">
         <div class="row">
           <textarea class="form-control"></textarea>
         </div>
       </div>
-      <button class="saveBtn saveBtn-hover col-2">
+      <button class="saveBtn  col-2">
         SAVE
       </button> 
     </section>
-    <section class="row">
+    <section class="row time-block">
       <div class="hour col-2 ">
-        time
+        1PM
+      </div>
+      <div class=" col-8">
+        <div class="row">
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+      <button class="saveBtn  col-2">
+        SAVE
+      </button> 
+    </section>
+    <section class="row time-block">
+      <div class="hour col-2 ">
+        2PM
+      </div>
+      <div class=" col-8">
+        <div class="row">
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+      <button class="saveBtn  col-2">
+        SAVE
+      </button> 
+    </section>
+    <section class="row time-block">
+      <div class="hour col-2 ">
+        3PM
+      </div>
+      <div class=" col-8">
+        <div class="row">
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+      <button class="saveBtn  col-2">
+        SAVE
+      </button> 
+    </section>
+    <section class="row time-block">
+      <div class="hour col-2 ">
+        4PM
+      </div>
+      <div class=" col-8">
+        <div class="row">
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+      <button class="saveBtn  col-2">
+        SAVE
+      </button> 
+    </section>
+    <section class="row time-block">
+      <div class="hour col-2">
+        5PM
       </div>
       <div class=" col-8">
         <div class="row">
