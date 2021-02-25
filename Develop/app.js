@@ -37,11 +37,18 @@ let inFuture = $('.future')
 //.each will "gather" it as a collection
 //my moment object is my missing piece
 //comparing two moment objects
-timeBlock.each((index, element) => {
+//selecting text area with ta-block
+$(".ta-block").each((index, element) => {
+    //make object
+    const hour =  moment({
+        hour: element.id
+    })
+    console.log(hour)
+    console.log(element)
     if (moment().isAfter(hour)) {
-        element.addClass('.present')
+        $(element).addClass('future')
     } else if (moment().isBefore(hour)){
-        element.addClass('.past')
+        $(element).addClass('past')
     }
 })
 
