@@ -5,8 +5,6 @@ let inPresent = $('.present')
 //translate into something moment can read, preferably a moment object
 let inFuture = $('.future')
 
-
-//timeBlock = [] why are you reassigning it?
 //how do I keep track of the timeblocks
 
 //should be working within full hour
@@ -15,23 +13,6 @@ let inFuture = $('.future')
 //only declaring, not calling here
 //call it
 //check time, then call this - is callback function
-//trackTask is my callback in jquery.each(array, callback)
-// function trackTask() {
-    
-//     if (moment().isBefore(inPresent)) {
-        
-//         //if task before currentTime then grey/or transparent 
-//         $('timeBlock').addClass('.past')
-//     } if(moment()) {
-//         //if task is currentTime then red
-//         $('timeBlock').addClass('.present')
-//     } if(moment().isAfter(inPresent)){
-//         //if task after current time then green
-//         $('timeBlock').addClass('.future')
-//     }
-// }
-//not comparable/not gonna work
-//what is inPresent
 
 //im assigning a class with a conditional so the colors can be shown
 //.each will "gather" it as a collection
@@ -43,15 +24,30 @@ $(".ta-block").each((index, element) => {
     const hour =  moment({
         hour: element.id
     })
-    console.log(hour)
-    console.log(element)
+    //actual hour
+    console.log(moment().get('hour'))
+    //object hour 
+    console.log(hour.get('hour'))
+    //compare these two so I can use 'present' class
+    //console.log(element)
+    if (moment().get('hour') === hour.get('hour')){
+        $(element).addClass('present')
+    }
     if (moment().isAfter(hour)) {
-        $(element).addClass('future')
-    } else if (moment().isBefore(hour)){
         $(element).addClass('past')
+    } else if (moment().isBefore(hour)){
+        $(element).addClass('future')
     }
 })
 
+//TODO: this 2/25
+//the things we need - input
+console.log($('.saveBtn'))
+console.log($('.ta-block'))
+//console log every button in array - pass function into each
+//setting parameter through another this,
+$('.saveBtn').each(index, saveBtnEl) => console.log(saveBtnEl)
+// console.log($(saveBtn))
 
 //print clock
 update()
